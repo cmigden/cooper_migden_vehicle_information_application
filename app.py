@@ -68,7 +68,7 @@ data['model'].sort_values().unique()
 
 
 #determins the titles of the columns. Columns are in the appropriate snake_case
-data.columns
+#data.columns
 
 
 # In[11]:
