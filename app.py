@@ -9,6 +9,8 @@ import plotly_express as px
 import streamlit as st
 #import needed packages
 
+print(pd.__version__)
+print(px.__version__)
 
 # In[2]:
 
