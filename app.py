@@ -43,12 +43,6 @@ for column in columns_to_replace:
 # In[6]:
 
 
-data['model_year'] = data['price'].replace('unknown', 0.0).astype(float)
-data['cylanders'] = data['price'].replace('unknown', 0.0).astype(float)
-data['odometer'] = data['price'].replace('unknown', 0.0).astype(float)
-data['is_4wd'] = data['price'].replace('unknown', 0.0).astype(float)
-
-
 # In[7]:
 
 
@@ -142,5 +136,8 @@ st.plotly_chart(hist)
 
 
 # Final conclusions
-# -There is a direct correlation between ____ and ____._____ occurs when _______ occurs
-# -
+# -There is a direct correlation between the type of car andtotal sales. This is seen by the trucks havingg significantly higher sales then any other vehicle.
+#The newer the model, the higher the price.
+# the lower the odometer, the higher the price.
+# -The better the condition the higher the price
+#The less daus it was posted, the higher the price
