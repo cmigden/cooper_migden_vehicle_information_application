@@ -20,14 +20,14 @@ data = pd.read_csv('/Users/coopermigden/data_sets/vehicles_us (1).csv')
 # In[3]:
 
 
-data.describe
+#data.describe
 #gives general information about the data and it shows how it looks
 
 
 # In[4]:
 
 
-data.isna().sum()
+#data.isna().sum()
 #shows the amount of unknown values in each column
 
 
