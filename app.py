@@ -81,7 +81,7 @@ data.to_csv('cleaned_vehicles_us.csv', index = True)
 # In[13]:
 
 
-st.title('**Car Sales Data')
+st.title('Car Sales Data')
 
 
 # In[14]:
@@ -94,7 +94,7 @@ st.write(data.head())
 # In[15]:
 
 
-st.header('*Interactive Scatterplot')
+st.header('Interactive Scatterplot')
 
 
 # In[16]:
