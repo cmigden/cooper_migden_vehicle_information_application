@@ -40,10 +40,13 @@ data = pd.read_csv('/User/coopermigden/data_sets/vehicles_us (1).csv')
 # In[5]:
 
 
-columns_to_replace = ['model_year','cylinders','odometer','paint_color','is_4wd']
-for column in columns_to_replace:
-    data[column] = data[column].fillna('unknown')
-#replaces all unknown values with the word unknown
+data['model_year'] = data['model_year'].fillna( data.groupby(['model'])['model_year'].transform('median'))
+data['cylinders'] = data['cylinders'].fillna( data.groupby(['cylinder'])['cylinders'].transform('median'))
+data['odometer'] = data['odometer'].fillna( data.groupby(['mileage'])['odometer'].transform('median'))
+#replaces all unknown values with the median of the values in the chart
+
+data['is_4wd'] = data['price'].replace('unknown', 0.0).astype(float)
+#changes nothing to 0.0
 
 
 # In[6]:
@@ -52,21 +55,21 @@ for column in columns_to_replace:
 # In[7]:
 
 
-#data.isna().sum()
+data.isna().sum()
 #check to see if the previous function worked
 
 
 # In[8]:
 
 
-#data.duplicated().sum()
+data.duplicated().sum()
 #to check if the data has any duplicates. There are no doubles
 
 
 # In[9]:
 
 
-#data['model'].sort_values().unique()
+data['model'].sort_values().unique()
 #went through list of model names to check if any are spelled incorrectly. none are spelled incorrectly.
 
 
@@ -74,14 +77,14 @@ for column in columns_to_replace:
 
 
 #determins the titles of the columns. Columns are in the appropriate snake_case
-#data.columns
+data.columns
 
 
 # In[11]:
 
 
 #to create a new csv file for the cleaned data
-#data.to_csv('cleaned_vehicles_us.csv', index = True)
+data.to_csv('cleaned_vehicles_us.csv', index = True)
 
 
 # In[13]:
