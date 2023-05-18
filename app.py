@@ -40,9 +40,9 @@ data = pd.read_csv('/coopermigden/cleaned_vehicles_us.csv')
 # In[5]:
 
 
-columns_to_replace = ['model_year','cylinders','odometer','paint_color','is_4wd']
-for column in columns_to_replace:
-    data[column] = data[column].fillna('unknown')
+#columns_to_replace = ['model_year','cylinders','odometer','paint_color','is_4wd']
+#for column in columns_to_replace:
+    #data[column] = data[column].fillna('unknown')
 #replaces all unknown values with the word unknown
 
 
@@ -52,14 +52,14 @@ for column in columns_to_replace:
 # In[7]:
 
 
-data.isna().sum()
+#data.isna().sum()
 #check to see if the previous function worked
 
 
 # In[8]:
 
 
-data.duplicated().sum()
+#data.duplicated().sum()
 #to check if the data has any duplicates. There are no doubles
 
 
