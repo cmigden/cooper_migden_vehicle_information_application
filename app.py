@@ -18,8 +18,8 @@ import numpy as np
 
 # In[2]:
 
-
-data = pd.read_csv('Users/coopermigden/data_sets/vehicles_us (1).csv')
+data = pd.read_csv('/Users/coopermigden/data_sets/vehicles_us (1).csv', encoding='utf-8')
+#data = pd.read_csv('/Users/coopermigden/data_sets/vehicles_us (1).csv')
 #Brings the data into the program
 
 
