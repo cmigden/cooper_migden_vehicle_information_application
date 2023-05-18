@@ -19,7 +19,7 @@ import numpy as np
 # In[2]:
 
 
-data = pd.read_csv('/Users/coopermigden/data_sets/vehicles_us.csv')
+data = pd.read_csv('/Users/coopermigden/cleaned_vehicles_us.csv')
 #Brings the data into the program
 
 
@@ -81,7 +81,7 @@ data['model'].sort_values().unique()
 
 
 #to create a new csv file for the cleaned data
-data.to_csv('cleaned_vehicles_us.csv', index = True)
+#data.to_csv('cleaned_vehicles_us.csv', index = True)
 
 
 # In[13]:
