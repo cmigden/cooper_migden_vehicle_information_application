@@ -19,7 +19,7 @@ import numpy as np
 # In[2]:
 
 
-data = pd.read_csv('/coopermigden/cleaned_vehicles_us.csv')
+data = pd.read_csv('/coopermigden/portfolio_projects/vehicles_us (1).csv')
 #Brings the data into the program
 
 
@@ -40,9 +40,9 @@ data = pd.read_csv('/coopermigden/cleaned_vehicles_us.csv')
 # In[5]:
 
 
-#columns_to_replace = ['model_year','cylinders','odometer','paint_color','is_4wd']
-#for column in columns_to_replace:
-    #data[column] = data[column].fillna('unknown')
+columns_to_replace = ['model_year','cylinders','odometer','paint_color','is_4wd']
+for column in columns_to_replace:
+    data[column] = data[column].fillna('unknown')
 #replaces all unknown values with the word unknown
 
 
@@ -66,7 +66,7 @@ data = pd.read_csv('/coopermigden/cleaned_vehicles_us.csv')
 # In[9]:
 
 
-data['model'].sort_values().unique()
+#data['model'].sort_values().unique()
 #went through list of model names to check if any are spelled incorrectly. none are spelled incorrectly.
 
 
