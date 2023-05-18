@@ -19,7 +19,7 @@ import numpy as np
 # In[2]:
 
 
-data = pd.read_csv('/User/coopermigden/portfolio_projects/vehicles_us (1).csv')
+data = pd.read_csv('/User/coopermigden/data_sets/vehicles_us (1).csv')
 #Brings the data into the program
 
 
