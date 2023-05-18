@@ -6,8 +6,10 @@
 
 import pandas as pd
 import plotly_express as px
+import altair as alt
 import streamlit as st
 import numpy as np
+
 #import needed packages
 
 print(pd.__version__)
