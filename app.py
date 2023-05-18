@@ -12,8 +12,8 @@ import numpy as np
 
 #import needed packages
 
-print(pd.__version__)
-print(px.__version__)
+#print(pd.__version__)
+#print(px.__version__)
 #this tells me the verions I am using so that I can add them to the requirements.txt page
 
 # In[2]:
