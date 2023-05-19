@@ -38,7 +38,10 @@ data = pd.read_csv('vehicles_us (1).csv')
 
 
 # In[5]:
-
+column_to_replace = ['paint_color']
+for column in column_to_replace:
+    data[column] = data[column].fillna('unknown')
+#changes None to Unknown for the paint color column
 
 data['model_year'] = data['model_year'].fillna( data.groupby(['model'])['model_year'].transform('median'))
 data['cylinders'] = data['cylinders'].fillna( data.groupby(['model'])['cylinders'].transform('median'))
