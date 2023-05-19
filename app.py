@@ -41,8 +41,8 @@ data = pd.read_csv('/User/coopermigden/data_sets/vehicles_us (1).csv')
 
 
 data['model_year'] = data['model_year'].fillna( data.groupby(['model'])['model_year'].transform('median'))
-data['cylinders'] = data['cylinders'].fillna( data.groupby(['cylinder'])['cylinders'].transform('median'))
-data['odometer'] = data['odometer'].fillna( data.groupby(['mileage'])['odometer'].transform('median'))
+data['cylinders'] = data['cylinders'].fillna( data.groupby(['model'])['cylinders'].transform('median'))
+data['odometer'] = data['odometer'].fillna( data.groupby(['model'])['odometer'].transform('median'))
 #replaces all unknown values with the median of the values in the chart
 
 data['is_4wd'] = data['price'].replace('unknown', 0.0).astype(float)
