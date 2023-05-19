@@ -80,7 +80,7 @@ data['model'].sort_values().unique()
 
 
 #determins the titles of the columns. Columns are in the appropriate snake_case
-data.columns
+#data.columns
 
 
 # In[11]:
@@ -99,7 +99,7 @@ st.title('Car Sales Data')
 # In[14]:
 
 
-st.write(data.head())
+#st.write(data.head())
 #displays data table
 
 
